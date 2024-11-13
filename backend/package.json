@@ -4,10 +4,17 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && npm install && npm run compile",
+    "clean": "rm -rf dist && rm -rf build && rm -rf node_modules",
+    "deploy": "git push heroku main",
+    "dev": "nodemon server.js",
+    "lint": "eslint .",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\"",
+    "serve": "node build/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Aijamal Jusupova",
   "license": "ISC",
   "description": "",
   "dependencies": {
