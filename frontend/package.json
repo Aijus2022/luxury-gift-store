@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon backend/server.js",
-    "client": "npm --prefix frontend start"
+    "client": "npm --prefix frontend start",
+    "deploy": "git add . && git commit -m \"Deploying to production\" && git push heroku main"
   },
   "dependencies": {
     "react": "^18.3.1",
