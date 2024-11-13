@@ -1,0 +1,194 @@
+/* index.css or global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color Variables */
+:root {
+  --primary-color: #A0D3C5; /* Mint green */
+  --secondary-color: #FAF9F6; /* Soft beige/peach */
+  --light-gray: #F1F1F1;
+  --dark-gray: #333333;
+  --white: #FFFFFF;
+  --button-hover-color: #86b3a6; /* Slightly darker mint green for hover */
+  --error-color: #D9534F; /* Red for error messages */
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--dark-gray);
+  background-color: var(--light-gray);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: var(--dark-gray);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--button-hover-color);
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Active link style */
+.active-link {
+  color: #1d4ed8; /* Highlight color */
+  font-weight: bold;
+  border-bottom: 2px solid #1d4ed8; /* Underline active link */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  background-color: var(--secondary-color);
+  padding: 3rem 1rem;
+}
+
+.header h1 {
+  font-family: 'Georgia', serif;
+  color: var(--dark-gray);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #666666;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.hero-section h2 {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+/* Product Section */
+.product-section {
+  background-color: var(--white);
+  padding: 3rem;
+  text-align: center;
+}
+
+.product-section h2 {
+  font-family: 'Georgia', serif;
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+}
+
+/* CSS for loading spinner */
+.loader {
+  border-top-color: transparent;
+  border-right-color: white;
+  border-bottom-color: white;
+  border-left-color: white;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+/* Button Styling */
+button {
+  background-color: var(--primary-color);
+  color: var(--dark-gray);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover and Active Styles */
+button:hover {
+  background-color: var(--button-hover-color); /* Darker mint green for better visibility */
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #86b3a6; /* Slightly darker color */
+  transform: scale(1);
+}
+
+button.disabled {
+  background-color: var(--light-gray);
+  color: #a1a1a1; /* Light gray text for disabled state */
+  cursor: not-allowed;
+}
+
+/* Ensure visibility for buttons with darker background */
+button.bg-blue-500 {
+  background-color: #1d4ed8;
+  color: var(--white);
+}
+
+button.bg-blue-500:hover {
+  background-color: #1e40af;
+}
+
+/* Ensure visibility for primary buttons */
+button.primary {
+  background-color: #2c7a7b; /* Darker teal */
+  color: var(--white);
+}
+
+button.primary:hover {
+  background-color: #285e61; /* Even darker on hover */
+}
