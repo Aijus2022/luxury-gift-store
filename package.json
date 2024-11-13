@@ -13,17 +13,16 @@
   },
   "homepage": "https://github.com/Aijus2022/luxury-gift-store",
   "author": "Aijamal Jusupova",
-  "license": "MIT",
-  "scripts": {
+  "license": "MIT","scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd backend && nodemon server.js",
     "client": "cd frontend && vite",
-    "build": "npm run clean && npm install && npm run backend:build && npm run frontend:build",
+    "build": "npm install && npm run backend:build && npm run frontend:build",
     "backend:build": "cd backend && npm install",
     "frontend:build": "cd frontend && npm install && vite build",
     "lint": "eslint .",
     "preview": "cd frontend && vite preview",
-    "start": "cd backend && npm start",
+    "start": "node backend/server.js",
     "deploy": "git add . && git commit -m \"Deploying to production\" && git push heroku main"
   },
   "dependencies": {
